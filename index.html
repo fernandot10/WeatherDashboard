@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 
     <title>Weather Dashboard</title>
@@ -13,16 +15,112 @@
 
 
 <body>
+    <!-- HEADER -->
+
+    <header class="header">
+        <h1> Weather Dashboard </h1>
+    </header>
+
+    <!-- SEARCH CITY/INPUT  -->
+    <div class="container">
+
+        <div class="row">
+            <div class="search col-4">
+                <h1> Search for a City: </h1>
+                <div class="input">
+                    <input type="text" id="city-input">
+                </div>
+
+                <!-- BUTTON -->
+
+                <div class="button">
+                    <button onclick='getWeather()' type="button">Search</button>
+                </div>
 
 
+                <!-- SEARCH HISTORY -->
+
+                <div class="search-history">
+                    <h3>Search History</h3>
+                    <div class="row">
+                        <div class="history"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CURRENT WEATHER DAY  -->
+
+            <div class="weatherContainer">
+                <h2>5 Day Forecast</h2>
+                <div class="card text-white bg-dark mb-6 current-weather">
+                    <h2>Today</h2>
+                    <img id="img1">
+                    <h2 id="city-Name"></h2>
+                    <div id="day1Temp"></div>
+                    <div id="day1Wind"></div>
+                    <div id="day1Hum"></div>
+                </div>
+
+                <!-- WEEKLY WEATHER CARDS -->
+
+                <div class="weekly-forecast">
+                    <div class="card-group">
+                        <div class="">
+                            <div class="card text-white bg-dark mb-3" style="width:12rem;">
+                                <p id="date2" class="card-header"></p>
+                                <div class="card-body">
+                                    <img id="img2" style='align-content: center;'>
+                                    <p class="card-subtitle" id="day2Temp">Temp</p>
+                                    <p class="card-subtitle" id="day2Wind">Wind</p>
+                                    <p class="card-subtitle" id="day2Hum">Humidity</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <div class="card text-white bg-dark mb-3" style="width:12rem;">
+                                <p id="date3" class="card-header"></p>
+                                <div class="card-body">
+                                    <img id="img3">
+                                    <p class="card-subtitle" id="day3Temp">Temp</p>
+                                    <p class="card-subtitle" id="day3Wind">Wind</p>
+                                    <p class="card-subtitle" id="day3Hum">Humidity</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <div class="card text-white bg-dark mb-3" style="width:12rem;">
+                                <p id="date4" class="card-header"></p>
+                                <div class="card-body">
+                                    <img id="img4">
+                                    <p class="card-subtitle" id="day4Temp">Temp</p>
+                                    <p class="card-subtitle" id="day4Wind">Wind</p>
+                                    <p class="card-subtitle" id="day4Hum">Humidity</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <div class="card text-white bg-dark mb-3" style="width:12rem;">
+                                <p id="date5" class="card-header"></p>
+                                <div class="card-body">
+                                    <img id="img5">
+                                    <p class="card-subtitle" id="day5Temp">Temp</p>
+                                    <p class="card-subtitle" id="day5Wind">Wind</p>
+                                    <p class="card-subtitle" id="day5Hum">Humidity</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
 
 
-
-
-
-
-
-
-    <script src='/assets/js/script.js'></script>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+<script src="./assets/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
 </html>
