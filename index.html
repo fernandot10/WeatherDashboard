@@ -34,7 +34,7 @@
                 <!-- BUTTON -->
 
                 <div class="button">
-                    <button onclick='getWeather()' type="button">Search</button>
+                    <button id = 'button' onclick='getWeather()' type="button">Search</button>
                 </div>
 
 
@@ -43,14 +43,14 @@
                 <div class="search-history">
                     <h3>Search History</h3>
                     <div class="row">
-                        <div class="history"></div>
+                        <div id="history"></div>
                     </div>
                 </div>
             </div>
 
             <!-- CURRENT WEATHER DAY  -->
 
-            <div class="weatherContainer">
+            <div class="weatherContainer col-8">
                 <h2>5 Day Forecast</h2>
                 <div class="card text-white bg-dark mb-6 current-weather">
                     <h2>Today</h2>
@@ -63,9 +63,9 @@
 
                 <!-- WEEKLY WEATHER CARDS -->
 
-                <div class="weekly-forecast">
+                <div class="weekly-forecast container">
                     <div class="card-group">
-                        <div class="">
+                        <div class="col">
                             <div class="card text-white bg-dark mb-3" style="width:12rem;">
                                 <p id="date2" class="card-header"></p>
                                 <div class="card-body">
@@ -77,7 +77,7 @@
                             </div>
                         </div>
 
-                        <div class="">
+                        <div class="col">
                             <div class="card text-white bg-dark mb-3" style="width:12rem;">
                                 <p id="date3" class="card-header"></p>
                                 <div class="card-body">
@@ -89,7 +89,7 @@
                             </div>
                         </div>
 
-                        <div class="">
+                        <div class="col">
                             <div class="card text-white bg-dark mb-3" style="width:12rem;">
                                 <p id="date4" class="card-header"></p>
                                 <div class="card-body">
@@ -101,7 +101,7 @@
                             </div>
                         </div>
 
-                        <div class="">
+                        <div class="col">
                             <div class="card text-white bg-dark mb-3" style="width:12rem;">
                                 <p id="date5" class="card-header"></p>
                                 <div class="card-body">

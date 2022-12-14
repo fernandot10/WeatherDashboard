@@ -8,6 +8,9 @@ function getWeather () {
     
     localStorage.setItem("City",cityInput.value);
 
+// LOCAL STORAGE 
+
+
 // DISPLAY DAYS OF THE WEEK AFTER 'TODAY'
 
     var date2 = dayjs().add(1,'day').format('dddd');
@@ -48,5 +51,5 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q='+cityInput.value+'&ap
     console.log(data)
 })
 
-.catch(err => alert('Something Went Wrong'))
+.catch(error => alert('ERROR'))
 }
