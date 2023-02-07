@@ -8,7 +8,6 @@ function getWeather () {
     
     localStorage.setItem("City",cityInput.value);
 
-// LOCAL STORAGE 
 
 
 // DISPLAY DAYS OF THE WEEK AFTER 'TODAY'
